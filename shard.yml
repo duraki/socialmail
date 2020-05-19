@@ -1,0 +1,13 @@
+name: socialmail
+version: 0.1.0
+
+authors:
+  - Halis Duraki <duraki@linuxmail.org>
+
+targets:
+  socialmail:
+    main: src/socialmail.cr
+
+crystal: 0.32.1
+
+license: MIT
