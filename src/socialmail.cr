@@ -1,6 +1,7 @@
 # SocialMail modules
 require "./socialmail/modules/base"
 require "./socialmail/modules/instagram"
+require "./socialmail/modules/facebook"
 
 # Other
 require "./detection"
