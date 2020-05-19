@@ -8,6 +8,10 @@ targets:
   socialmail:
     main: src/socialmail.cr
 
-crystal: 0.32.1
+crystal: 0.34.0
+
+dependencies:
+  crest:
+    github: mamantoha/crest
 
 license: MIT

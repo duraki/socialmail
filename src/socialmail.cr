@@ -2,8 +2,12 @@
 require "./socialmail/modules/base"
 require "./socialmail/modules/instagram"
 
+# Other
+require "./detection"
+
 # Application initializer
 require "option_parser"
+require "crest"
 
 module Socialmail
   VERSION = "0.1.0"
@@ -16,9 +20,11 @@ module Socialmail
         / ___/ __ \/ ___/ / __ `/ / __ `__ \/ __ `/ / / 
        (__  ) /_/ / /__/ / /_/ / / / / / / / /_/ / / /  
       /____/\____/\___/_/\__,_/_/_/ /_/ /_/\__,_/_/_/    
-      - OSINT tool to detect email address registration on various networks
+      ++ OSINT tool to detect email address registration on various networks
       - @author Halis Duraki <duraki@linuxmail.org>
       - @web    https://github.com/duraki/socialmail
+
+
   EOF
 
   OptionParser.parse do |parser|
@@ -40,5 +46,6 @@ module Socialmail
 
   if (!email_addr.empty?)
     print "Detecting social networks [...] on email address: #{email_addr}\n"
+    Detection.do_detection(email_addr)
   end
 end
